@@ -1500,7 +1500,7 @@ class Sender(LoggingCommand):
             # If the notification is already in the existing_notifications we don't need to do anything
             # Just remove it from the existing notifications so we dont delete it
             if notification_name in existing_notifications:
-                del existing_notifications[notification_name]
+                existing_notifications.remove(notification_name)
                 continue
 
             try:
